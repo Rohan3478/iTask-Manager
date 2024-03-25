@@ -79,7 +79,9 @@ function App() {
           <input onChange={handleChange} value={todo} type="text" className='md:w-3/4 w-[65%] rounded-lg px-3 py-1' />
           <button onClick={handleAdd} disabled={todo.length<=3} className='bg-violet-800 hover:bg-violet-950 py-1.5 text-sm font-bold text-white disabled:bg-violet-400 rounded-lg md:mx-2 mx-1 px-3'>Save</button>
         </div>
-        <input className='my-4' onChange={toggleFinish} type="checkbox" checked={finish} id="" />Show Finished
+        <input className='my-4' id='show' onChange={toggleFinish} type="checkbox" checked={finish} />
+        <label className='mx-2' htmlFor="show">Show Finished</label>
+        <div className='h-[3px] bg-black opacity-25 my-3 w-[90%] mx-auto'><hr /></div>
         <h2 className='text-lg font-bold'>Your Todos</h2>
         <div className="todos">
           {todos.length === 0 && <div className='m-5'>No Todos to display</div>}
